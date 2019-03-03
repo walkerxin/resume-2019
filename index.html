@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Amanda's Resume</title>
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="//at.alicdn.com/t/font_816691_7r0q31xwk3c.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+        html, body {
+            height: 100%;
+        }
+        .site-welcome {
+            display: none;
+            background: #fff;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .site-welcome.active {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
+    <div id="topNavBarId" class="topNavBar offset">
+        <div class="topNavBarDiv clearfix">
+            <a class="logo" href="#">
+                <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav>
+                <ul class="clearfix">
+                    <li>
+                        <a href="#siteAbout">关于</a>
+                    </li>
+                    <li>
+                        <a href="#siteSkills">技能</a>
+                    </li>
+                    <li>
+                        <a href="#siteProfile">作品</a>
+                        <ul class="subMenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                            <li>作品4</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#siteBlogs">博客</a>
+                        <ul class="subMenu">
+                            <li>博客1</li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#siteCalandar">日历</a>
+                    </li>
+                    <li>
+                        <a href="#siteContact">联系方式</a>
+                    </li>
+                    <li>
+                        <a href="#siteOthers">其他</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="masker"></div>
+    </div>
+    <main id="siteAbout" class="offset" data-x>
+        <div class="userCard contentBox">
+            <div class="avatarAndProfile clearfix">
+                <div class="avatar">
+                    <img src="img/avatar.jpg" width="299" height="347" alt="头像">
+                </div>
+                <div class="profile">
+                    <span class="welcome">HELLO
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>Amanda</h1>
+                    <p>Front-end Developer Engineer</p>
+                    <hr>
+                    <dl class="clearfix">
+                        <dt>年龄</dt>
+                        <dd>20</dd>
+                        <dt>所在城市</dt>
+                        <dd>深圳</dd>
+                        <dt>邮箱</dt>
+                        <dd>amanda@gmail.com</dd>
+                        <dt>手机</dt>
+                        <dd>17032400190</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <footer class="media">
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-lingyingbiaozhun"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+
+        <div class="downloadResumeWrapper">
+            <a class="downloadResume" target="_blank" href="./resume.pdf" download>下载 PDF 简历</a>
+        </div>
+
+        <p class="desc contentBox">
+            Amanda Huang. Senior Web Developer specializing in front-end development. 
+            Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including JavaScript, SQL, 
+            and CSS in project management and customer relations.
+        </p>
+    </main>
+
+    <section id="siteSkills" class="skills contentBox offset" data-x>
+        <h2>专业技能</h2>
+        <ol class="clearfix">
+            <li>
+                <span>HTML 5 & CSS 3</span>
+                <div class="progressBar">
+                    <div class="progress" style="width:70%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>JavaScript</span>
+                <div class="progressBar">
+                    <div class="progress" style="width:40%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>jQuery</span>
+                <div class="progressBar">
+                    <div class="progress" style="width:35%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>Vue</span>
+                <div class="progressBar">
+                    <div class="progress" style="width:20%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>React</span>
+                <div class="progressBar">
+                    <div class="progress" style="width:5%;"></div>
+                </div>
+            </li>
+            <li>
+                <span>HTTP</span>
+                <div class="progressBar">
+                    <div class="progress" style="width:70%;"></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section id="siteProfile" class="portfolio contentBox offset" data-x>
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS&amp;CSS</li>
+            </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
+        </nav>
+
+        <div class="works">
+            <div class="big">
+                <img src="img/1.jpg" alt="works-1">
+            </div>
+            <div class="small">
+                <img src="img/2.jpg" alt="works-2">
+            </div>
+            <div class="small">
+                <img src="img/3.jpg" alt="works-3">
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script>
+        
+        siteWelcome.classList.remove('active')
+        highLight()
+        topNavBarId.classList.remove('offset')
+
+        window.onscroll = function(e) {
+            stickyOrNot()
+            highLight()
+        }
+
+        // Setup the animation loop.
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+        
+        let liTags = document.querySelectorAll('#topNavBarId nav>ul>li')
+        for(let i=0; i<liTags.length; i++) {
+            
+            liTags[i].onmouseover = function(x) {
+                x.currentTarget.classList.add('active')
+            }
+            
+            liTags[i].onmouseout = function(x) {
+                x.currentTarget.classList.remove('active')
+            }
+
+            liTags[i].onclick = function(x) {
+
+                x.preventDefault()
+                
+                let aTag = x.currentTarget.getElementsByTagName('a')[0]
+                // aTag.href 取值时浏览器会自动处理成 "当前网址+ a中href属性的值"
+                let findDiv = document.querySelector(aTag.getAttribute('href'))
+                if(findDiv) {
+                    
+                    let currentTop = window.scrollY
+                    let targetTop = findDiv.offsetTop - 100
+                    let s = targetTop - currentTop
+
+                    // 假设100px 用时 300ms
+                    let t = Math.abs(s / 100)  * 300
+                    t = t > 500 ? 500 : t
+
+                    var coords = { y: window.scrollY };     // 起始位置
+                    var tween = new TWEEN.Tween(coords)
+                            .to({ y: findDiv.offsetTop - 100 }, t)      // 目标位置, 花费时间
+                            .easing(TWEEN.Easing.Quadratic.InOut)       // 采用的 缓动类型
+                            .onUpdate(function() {                      // 每次更新位置时触发，体现在传入的位置变量
+                                window.scrollTo(0, coords.y)        // 如何更新界面
+                            })
+                            .start();       // 开始缓动
+
+                }
+                
+            }
+
+        }
+
+        function stickyOrNot() {
+            // window.scrollY 返回文档在垂直方向已滚动的像素值
+            if(window.scrollY > 0) {
+                topNavBarId.classList.add('sticky')
+            }else {
+                topNavBarId.classList.remove('sticky')
+            }
+        }
+
+        function highLight() {
+
+            let currentTop = window.scrollY
+            let middleTop = window.scrollY + document.body.clientHeight / 2
+            let xTags = document.querySelectorAll('[data-x]')
+            let minIdx = 0, middleMinIdx = 0
+            for(let i=1; i<xTags.length; i++) {
+                if(Math.abs(xTags[minIdx].offsetTop - currentTop) > Math.abs(xTags[i].offsetTop - currentTop)) {
+                    minIdx = i
+                }
+                if(Math.abs(xTags[middleMinIdx].offsetTop - middleTop) > Math.abs(xTags[i].offsetTop - middleTop)) {
+                    middleMinIdx = i
+                }
+            }
+
+            if(middleMinIdx > 0) {
+                for(let i=0; i<middleMinIdx; i++) {
+                    xTags[i].classList.remove('offset')
+                }
+            }
+            xTags[middleMinIdx].classList.remove('offset')
+
+            let aTag = document.querySelector('#topNavBarId nav a[href="#' + xTags[minIdx].id + '"]')
+            let allLi = aTag.parentNode.parentElement.children
+            for(let i=0; i<allLi.length; i++) {
+                allLi[i].classList.remove('highlight')
+            }
+            aTag.parentNode.classList.add('highlight')
+
+        }
+
+        portfolio1.onclick = function() {
+            portfolioBar.className = 'bar state-1'
+        }
+
+        portfolio2.onclick = function() {
+            portfolioBar.className = 'bar state-2'
+        }
+
+        portfolio3.onclick = function() {
+            portfolioBar.className = 'bar state-3'
+        }
+    </script>
+</body>
+</html>

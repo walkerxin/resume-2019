@@ -1,0 +1,454 @@
+@font-face {
+    font-family: "Fredoka One";
+    src: url('https://fonts.gstatic.com/s/fredokaone/v5/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2') format('woff2');
+}
+
+/* cyrillic */
+@font-face {
+    font-family: "Open Sans";
+    src: url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2) format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+    color: #3d4451;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.topNavBar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    color: #BEC0C3;
+    transition: all .3s;
+}
+
+.topNavBar.sticky {
+    background: #fff;
+    padding: 8px 0px;
+    color: inherit;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.topNavBar .topNavBarDiv {
+    padding: 0 158px;
+}
+
+.topNavBar .logo {
+    float: left;
+    font-size: 30px;
+    font-family: "Fredoka One";
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.topNavBar nav {
+    float: right;
+    padding-top: 8px;
+}
+
+.topNavBar.sticky nav {
+    padding-top: 4px;
+}
+
+.topNavBar .logo>.rs {
+    color: #E8676B;
+}
+
+.topNavBar .logo>.card {
+    color: #9A9DA2;
+    margin-left: 3px;
+}
+
+.topNavBar nav>ul>li {
+    float: left;
+    padding: 1px 0;
+    margin-left: 17px;
+    margin-right: 17px;
+    border-top: 3px solid transparent;
+    position: relative;
+}
+
+.topNavBar nav>ul>li::after {
+    content: '';
+    display: block;
+    height: 3px;
+}
+
+.topNavBar nav>ul>li.active,
+.topNavBar nav>ul>li.highlight {
+    border-bottom-width: 0;
+}
+
+.topNavBar nav>ul>li.active::after,
+.topNavBar nav>ul>li.highlight::after {
+    background-color: #E8676B;
+    animation: menuSlider 0.5s;
+}
+
+@keyframes menuSlider {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.topNavBar nav>ul>li .subMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    color: #3d4451;
+    background: #fff;
+    padding: 5px 0;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.topNavBar nav>ul>li.active .subMenu {
+    display: block;
+    animation: subMenuSlider 0.3s;
+}
+
+@keyframes subMenuSlider {
+    0% {
+        margin-right: 100%;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+.topNavBar nav>ul>li .subMenu li {
+    white-space: nowrap;
+    text-align: right;
+    cursor: pointer;
+    padding: 5px 25px;
+}
+
+.topNavBar nav>ul>li .subMenu li:hover {
+    background: #fafafa;
+}
+
+.topNavBar nav>ul>li>a {
+    font-size: 14px;
+    color: inherit;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: block;
+}
+
+.banner {
+    height: 516px;
+    background-image: url(../img/rs-cover.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner>.masker {
+    height: 100%;
+    background: rgba(44, 51, 64, 0.8);
+}
+
+body>main {
+    margin-top: -344px;
+}
+
+body .contentBox {
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userCard,
+section.skills ol {
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.userCard>.avatarAndProfile {
+    background: white;
+    padding: 56px 50px 30px;
+}
+
+.avatarAndProfile>.avatar {
+    float: left;
+}
+
+.avatarAndProfile>.profile {
+    float: left;
+    margin-left: 65px;
+    max-width: 465px;
+}
+
+.avatarAndProfile>.profile>.welcome {
+    background-color: #E8676B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.welcome .triangle {
+    display: inline-block;
+    width: 0;
+    border: 8px solid transparent;
+    border-left-color: #E8676B;
+    border-top-width: 0;
+    position: absolute;
+    top: 100%;
+    left: 5px;
+}
+
+.avatarAndProfile>.profile>h1 {
+    margin-top: 28px;
+    color: #3d4451;
+}
+
+.avatarAndProfile>.profile>hr {
+    height: 0;
+    border: none;
+    border-bottom: 1px solid #DEDEDE;
+    margin-top: 22px;
+    margin-bottom: 28px;
+}
+
+.avatarAndProfile>.profile dl dt {
+    float: left;
+    width: 30%;
+    font-weight: bold;
+    padding: 12px 0;
+    line-height: 18px;
+    /* ubuntu上查看时发现这边的字体变高，发生错位（不同系统查看字体的行高会不一样） */
+}
+
+.avatarAndProfile>.profile dl dd {
+    float: left;
+    width: 70%;
+    color: #9DA0A7;
+    padding: 12px 0;
+}
+
+.userCard .media {
+    background-color: #E8676B;
+    text-align: center;
+}
+
+.userCard .media a {
+    border-radius: 50%;
+    display: inline-block;
+    /* 没加时 a 标签没能把 svg 完全包住 */
+    padding: 12px;
+    margin: 16px;
+}
+
+.userCard .media a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.userCard .media svg {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    vertical-align: top;
+}
+
+.downloadResumeWrapper {
+    text-align: center;
+}
+
+.downloadResumeWrapper>.downloadResume:hover {
+    box-shadow: 0px 3px 13px 2px rgba(0, 0, 0, 0.2)
+}
+
+.downloadResumeWrapper>.downloadResume {
+    margin: 32px 0 40px;
+    color: #3d4451;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 21px 55px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s
+}
+
+[data-x] {
+    transition: all .5s;
+}
+
+[data-x].offset {
+    transform: translateY(100px);
+}
+
+.topNavBar.offsetTop {
+    transform: translateY(-100px);
+}
+
+main p.desc {
+    text-align: center;
+    font-size: 20px;
+    line-height: 36px;
+    font-family: ttf-wqy-zenhei;
+}
+
+section.contentBox {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+section.contentBox h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+section.skills ol {
+    background: #fff;
+    margin-top: 30px;
+    padding: 0px 50px 50px;
+}
+
+section.skills ol>li {
+    float: left;
+    width: 48.2%;
+    padding-top: 40px;
+}
+
+section.skills ol>li:nth-child(even) {
+    float: right;
+}
+
+section.skills ol>li span,
+section.portfolio ol>li {
+    font-size: 14px;
+}
+
+.progressBar {
+    height: 5px;
+    border-radius: 2px;
+    background: #FAE0E0;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progressBar>.progress {
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+section.skills.offset .progressBar>.progress {
+    transform: translateX(-100%)
+}
+
+.progressBar>.progress,
+section.portfolio nav .bar>.bar-inner {
+    height: 100%;
+    background: #E8676B;
+    border-radius: 2px;
+}
+
+section.portfolio {
+    text-align: center;
+}
+
+section.portfolio nav {
+    margin-top: 30px;
+}
+
+section.portfolio nav {
+    display: inline-block;
+    vertical-align: top;
+    /* display: inline-block;后 此div下面 无缘无故出现一个空隙 */
+}
+
+section.portfolio nav ol>li {
+    float: left;
+    line-height: 18px;
+    color: #000;
+    font-weight: 600;
+    font-family: "Open Sans";
+    cursor: pointer;
+}
+
+section.portfolio nav ol>li:nth-child(2) {
+    padding: 0 45px;
+    /* 不用 margin: 0 45px */
+}
+
+section.portfolio nav .bar {
+    height: 5px;
+    border-radius: 2px;
+    margin-top: 12px;
+    background-color: #fff;
+}
+
+section.portfolio nav .bar>.bar-inner {
+    position: relative;
+    transition: all 0.5s;
+}
+
+section.portfolio nav .bar.state-1>.bar-inner {
+    width: 32px;
+    left: -2px
+}
+
+section.portfolio nav .bar.state-2>.bar-inner {
+    width: 55px;
+    left: 28%;
+}
+
+section.portfolio nav .bar.state-3>.bar-inner {
+    width: 82px;
+    left: 64%;
+}
+
+section.portfolio .works {
+    margin-top: 30px;
+    position: relative;
+}
+
+section.portfolio .works div {
+    position: absolute;
+}
+
+section.portfolio .works div.big {
+    top: 0;
+    left: 5px;
+}
+
+section.portfolio .works div.small {
+    top: 0;
+    right: 5px;
+}
+
+section.portfolio .works div.small:nth-child(3) {
+    top: 298px;
+    right: 5px;
+    margin-bottom: 200px
+}
