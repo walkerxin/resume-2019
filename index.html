@@ -213,8 +213,23 @@
             </div>
         </div>
     </section>
+
+    <section id="siteMessage" class="contentBox">
+        <h2>留言</h2>
+        <form>
+            <label>姓名</label>
+            <input type="text" name="name"><br>
+            <label style="vertical-align:top">内容</label>
+            <textarea name="content" rows="10"></textarea>
+            <br>
+            <input type="submit" value="提交">
+        </form>
+        <ol class="messageList"></ol>
+    </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+    <script src="js/message.js"></script>
     <script>
         
         siteWelcome.classList.remove('active')

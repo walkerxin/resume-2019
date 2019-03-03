@@ -431,6 +431,7 @@ section.portfolio nav .bar.state-3>.bar-inner {
 section.portfolio .works {
     margin-top: 30px;
     position: relative;
+    height: 600px;
 }
 
 section.portfolio .works div {
@@ -451,4 +452,23 @@ section.portfolio .works div.small:nth-child(3) {
     top: 298px;
     right: 5px;
     margin-bottom: 200px
+}
+
+section#siteMessage h2 {
+    padding-bottom: 30px
+}
+
+section#siteMessage textarea {
+    width: 90%;
+    resize: none;
+}
+
+section#siteMessage ol.messageList {
+    padding: 50px 40px;
+}
+
+section#siteMessage ol.messageList li{
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
