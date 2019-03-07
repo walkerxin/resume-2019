@@ -46,11 +46,16 @@
                     messageList.removeChild(messageList.children[0])
                 }
 
+                // 先建立文本片段 (document fragment) -> 將元素 (element) 加入文本片段中 -> 再將文本片段加入 DOM 樹中。
+                // 正因為文本片段是存在内存中，不是 DOM 树的一部分，增加子元素并不會导致网页重刷 (reflow)(重新计算元素的位置和几何)。
+                // 因此采用文本片段通常会有比较好的性能表现
+                let fragment = document.createDocumentFragment()
                 messages.forEach(item => {
                     var li = document.createElement('li')
                     li.textContent = item.name + ': ' + item.content
-                    messageList.append(li)
+                    fragment.append(li)
                 })
+                messageList.append(fragment)
             })
         },
         saveMessage() {
